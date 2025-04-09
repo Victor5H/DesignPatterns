@@ -1,0 +1,9 @@
+Objects or entities should be open for extension but closed for modification.
+
+any class or interface should closed for modification, but open for extension
+
+this operation interface allows other developers to use this interface for other operations and
+doesnt need to modify any existing classes.
+
+this is how anything should be designed that in later part of porject
+the functionality should be easily modified without modifying code

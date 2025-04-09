@@ -1,0 +1,26 @@
+Great question! The difference between a Builder and a Director comes from the classic implementation of the Builder design pattern, as described in design pattern literature like the Gang of Four (GoF) book.
+
+Let’s break it down clearly:
+
+👷‍♂️ Builder – What to build and how to build it
+Defines the steps to build a complex object.
+
+Each method typically sets part of the object.
+
+Can be used with or without a director.
+
+Your ComputerBuilder is a great example:
+You’re setting properties like CPU, GPU, Motherboard, and finally building the object.
+
+🎬 Director – Orchestrates the building process
+Controls the flow of building a product using a Builder.
+
+Doesn't know the concrete details of the product.
+
+Delegates the step-by-step construction to the builder.
+
+Useful when the construction process is repetitive or standardized.
+
+🔧 Analogy
+Think of Builder as the engineer who knows how to construct a car.
+Think of Director as the manager who says: “Build me a sports car” or “Build me a family car.”

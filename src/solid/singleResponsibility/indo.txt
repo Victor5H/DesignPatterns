@@ -1,0 +1,8 @@
+A class should have one and only one reason to change, meaning that a class should have only one job.
+
+a class should have a single resposiblibity like updating an entity, not multiple operation
+to make a payment we need to make a transaction class
+
+account - entity
+accountService - for operations related to account
+transaction - for making withdrawals and deposits

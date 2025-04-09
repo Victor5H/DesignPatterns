@@ -1,0 +1,34 @@
+The Adapter Design Pattern, which is a structural pattern, is used to bridge the gap between two
+incompatible interfaces—allowing them to work together without changing their existing code.
+
+2. Working with External Libraries (like GCS or AWS SDKs)
+Scenario:
+You have your own FileUploader interface, but need to use Google Cloud Storage or AWS S3 SDK.
+
+Adapter:
+Create an adapter class that implements your interface and internally uses the cloud SDK methods.
+
+3. UI Toolkits Integration
+Scenario:
+Your app uses JavaFX, but you want to use a custom widget that only supports Swing.
+
+Adapter:
+You wrap the Swing widget in an adapter that lets JavaFX treat it like a native component.
+
+4. Database Drivers (JDBC Example)
+The JDBC API provides a consistent interface for interacting with different databases. Each database (like MySQL, PostgreSQL) provides a driver (adapter) that conforms to this interface, internally translating JDBC calls to database-specific protocols.
+
+5. Microservices with Different Protocols
+Scenario:
+One service communicates over REST, another expects gRPC.
+
+Adapter:
+You create a bridge or proxy that converts REST requests into gRPC calls.
+
+🧠 Summary
+Application Area	Adapter Use Case
+Legacy code	Modern interface compatibility
+3rd-party APIs	Internal standard interfaces
+UI frameworks	Cross-platform components
+Database connectivity	Unified access with JDBC
+Distributed systems	Protocol translation

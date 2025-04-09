@@ -1,0 +1,43 @@
+prototype is used to create copy of existing objects instead of creating new objects to
+reduce overhead of creating new objects, cloning doesnot mean that new refernce to same object,
+it means new object with different id
+
+✅ Use Cases / Motivation
+Object creation is expensive (e.g., takes time, memory, or network).
+
+You want to create many similar objects with small changes.
+
+You need to avoid using new and tightly coupling code to constructors.
+
+You want to hide complex creation logic from the client.
+
+🎯 Real-World Examples
+Cloning documents or templates in an editor (like creating a new Google Doc from a template).
+
+Game development – where many similar enemies or objects are spawned quickly.
+
+Deep cloning configurations or settings objects.
+
+Using Deep copy method instead of java clone method since:
+1. The Cloneable interface is misleading
+It’s just a marker interface (i.e., no methods).
+
+Yet, if you implement it but don’t override clone(), you’ll still get CloneNotSupportedException.
+
+2. The clone() method is protected in Object
+You must override it and make it public, which is unintuitive.
+
+3. Does a shallow copy by default
+Most people expect deep copying. But the default super.clone() does only a field-by-field shallow copy.
+
+Mutable fields (like lists, objects) still point to the original, causing bugs.
+
+4. Breaks encapsulation
+clone() uses field-level copying, which may bypass constructors and validations.
+
+Any invariants in your class can be violated by an improperly cloned object.
+
+5. Difficult to implement correctly
+If your object contains other objects, you have to manually clone them.
+
+The logic gets complex and error-prone as object graphs grow.
