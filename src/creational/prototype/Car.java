@@ -12,9 +12,9 @@ public class Car {
         this.capacity = capacity;
     }
     Car (Car original){
-        this.exhaust = new Exhaust(original.exhaust);
-        this.engine = new Engine(original.engine);
-        this.chassis = new Chassis(original.chassis);
+        this.exhaust = original.getExhaust().copy();
+        this.engine = original.getEngine().copy();
+        this.chassis = original.getChassis().copy();
         this.capacity = original.capacity;
     }
     public Car copy(){

@@ -9,6 +9,9 @@ public class Exhaust {
     public Exhaust(String type){
         this.type = type;
     }
+    public Exhaust copy(){
+        return new Exhaust(this);
+    }
 
     @Override
     public String toString() {

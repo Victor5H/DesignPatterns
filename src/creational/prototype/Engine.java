@@ -12,6 +12,9 @@ public class Engine {
         this.type = original.type;
         this.name = original.name;
     }
+    public Engine copy(){
+        return new Engine(this);
+    }
 
     @Override
     public String toString() {

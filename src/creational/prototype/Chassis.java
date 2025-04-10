@@ -9,6 +9,9 @@ public class Chassis {
     public Chassis (Chassis original){
         this.type = original.type;
     }
+    public Chassis copy(){
+        return new Chassis(this);
+    }
 
     @Override
     public String toString() {

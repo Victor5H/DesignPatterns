@@ -1,0 +1,30 @@
+The Bridge Design Pattern is a structural pattern used to decouple abstraction from implementation
+, so that both can vary independently.
+
+🧱 Primary Application of the Bridge Pattern:
+🎯 When you want to avoid a combinatorial explosion of classes due to multiple dimensions of variation.
+
+Used to reduce number of classes of each type like where cartersian product of classes happen, ex
+There are multiple types of media player such as YT plasyer, MX player or VLC media player, Each of them would
+have indivual classes to plat in either HD, 4K. 8K...
+so this makes a cartesian product of these classes making them, YT player HD, Yt player 4K. YT player 8K
+and all these 3 classes for MX player and VLC, making total of 9 classes, from 3*3.
+If one new media player is added the list adds by 3 more.
+
+✅ Real-World Problem It Solves:
+Let’s say you are building a UI framework and you have:
+
+3 UI elements: Button, Checkbox, Dropdown
+
+3 Platforms: Windows, Linux, Mac
+
+If you try to implement each combination, you end up with:
+9 different classes.
+________________________________________________________________________________________
+Use Case	            |            Why Bridge Helps
+UI frameworks for multiple platforms	|    Separate widgets from rendering
+Cross-platform file systems |	Abstract FileSystem from OS
+Device drivers	    |    Separate device types from operations
+Messaging services (SMS, Email, Push)	 |   Decouple message type from delivery method
+Multimedia players	 |   Decouple player controls from decoding logic
+_________________________________________________________________________________________
