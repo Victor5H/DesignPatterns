@@ -20,6 +20,8 @@ Let’s say you are building a UI framework and you have:
 
 If you try to implement each combination, you end up with:
 9 different classes.
+
+We can decompose this inheritance into composition
 ________________________________________________________________________________________
 Use Case	            |            Why Bridge Helps
 UI frameworks for multiple platforms	|    Separate widgets from rendering
@@ -28,3 +30,5 @@ Device drivers	    |    Separate device types from operations
 Messaging services (SMS, Email, Push)	 |   Decouple message type from delivery method
 Multimedia players	 |   Decouple player controls from decoding logic
 _________________________________________________________________________________________
+
+It makes a bridge between classes.
