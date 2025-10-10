@@ -10,6 +10,7 @@ public abstract class Beverage {
     }
     public void setSize(Size size){
         this.size = size;
+        //description = String.valueOf(getSize());
     }
     public Size getSize(){
         return this.size;

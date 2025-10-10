@@ -8,4 +8,5 @@ public class testBuilder {
         System.out.println(c);
         System.out.println(c4);
     }
+    Computer r =  new Computer.ComputerBuilder().GPU("sdf").build();
 }

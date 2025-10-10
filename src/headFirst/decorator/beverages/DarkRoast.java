@@ -1,8 +1,9 @@
 package headFirst.decorator.beverages;
 
 public class DarkRoast extends Beverage{
+    private String name= "Dark Roast";
     public DarkRoast(){
-        this.description = this.getSize()+" Dark Roast";
+        this.description = this.getSize()+" "+name;
     }
 
     @Override

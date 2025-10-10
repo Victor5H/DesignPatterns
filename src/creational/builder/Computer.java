@@ -66,9 +66,9 @@ public class Computer {
             return this;
         }
         public Computer build(){
-//            return new Computer(this);
+            return new Computer(this);
 //            or can validate here as well
-            return this.computer;
+//            return this.computer;
         }
 
         @Override
