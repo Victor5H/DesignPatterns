@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
     public static void main(String[] args) throws Exception{
         ExecutorService executorService = Executors.newFixedThreadPool(2);
-        YoutubeChannel choding = new YoutubeChannel();
+        CodeWithAryan choding = new CodeWithAryan();
 
         EmailNotification emailNotification = new EmailNotification(choding);
         PhoneNotification phoneNotification = new PhoneNotification(choding);
@@ -17,8 +17,11 @@ public class Main {
         choding.addSubscriber(emailNotification);choding.addSubscriber(phoneNotification);
         Thread.sleep(1000);
         choding.postNewVideo("latest1");
+        choding.removeSubscriber(emailNotification);
         Thread.sleep(1000);
         choding.postNewVideo("latest");
+
+
 
         executorService.shutdown();
     }
