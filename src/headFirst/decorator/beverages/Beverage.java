@@ -3,10 +3,16 @@ package headFirst.decorator.beverages;
 public abstract class Beverage {
 
     public enum Size {TALL, GRANDE, VENTI}
-    Size size = Size.TALL;
-    String description="Unknown Beverage";
+    private Size size = Size.TALL;
+    private String  description;
     public String getDescription(){
         return description;
+    }
+    public Beverage (String description){
+        this.description=description;
+    }
+    public Beverage(){
+
     }
     public void setSize(Size size){
         this.size = size;

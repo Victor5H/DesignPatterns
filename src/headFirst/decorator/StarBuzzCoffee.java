@@ -3,10 +3,7 @@ package headFirst.decorator;
 import headFirst.decorator.beverages.Beverage;
 import headFirst.decorator.beverages.Decaf;
 import headFirst.decorator.beverages.Espresso;
-import headFirst.decorator.condiments.Mocha;
-import headFirst.decorator.condiments.Soy;
-import headFirst.decorator.condiments.SteamedMilk;
-import headFirst.decorator.condiments.Whip;
+import headFirst.decorator.condiments.*;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -19,6 +16,7 @@ public class StarBuzzCoffee {
         decaf = new Mocha(decaf);
         decaf = new SteamedMilk(decaf);
         decaf = new Whip(decaf);
+        decaf = new Sugar(decaf);
         System.out.println(decaf.getDescription());
         System.out.println(decaf.cost());
 

@@ -1,9 +1,9 @@
 package headFirst.decorator.beverages;
 
 public class Espresso extends Beverage{
-    String name = "Espresso";
+    private static String name = "Espresso";
     public Espresso(){
-        this.description = this.getDescription()+" "+name;
+        super(name);
     }
 
     @Override

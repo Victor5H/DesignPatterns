@@ -1,9 +1,9 @@
 package headFirst.decorator.beverages;
 
 public class HouseBlend extends Beverage{
-    private String name = "House Blend";
+    private static String name = "House Blend";
     public HouseBlend(){
-        this.description = this.getSize()+" "+name;
+        super(name);
     }
 
     @Override
